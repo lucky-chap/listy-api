@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAllItems, createItem, updateItem, deleteItem, getItem } = require('../../controllers/itemsController');
+const { getAllItems, createItem, updateItem, deleteItem } = require('../../controllers/itemsController');
 const auth = require('../../middleware/auth');
 const router = express.Router();
 
