@@ -7,7 +7,7 @@ const router = express.Router();
 // @route  GET api/items
 // @desc   Get All Items Of The Authenticated User
 // @access Private
-router.get('/', getAllItems);
+router.get('/', auth, getAllItems);
 
 // @route  POST api/items
 // @desc   Create an Item

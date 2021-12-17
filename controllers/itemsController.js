@@ -1,7 +1,7 @@
 const Item = require('../models/Item');
 
 const getAllItems = async (req, res) => {
-    Item.find()
+    Item.find({ user: req.user.id })
         .sort({ date: -1 })
         .then(items => res.json(items))
         .catch(err => res.status(400).json(err))
